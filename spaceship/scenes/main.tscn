@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://b3urjcm587kqf"]
+
+[ext_resource type="Texture2D" uid="uid://d1qjsymlyvxup" path="res://assets/background.jpg" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://d1qj4kp26gvj5" path="res://scenes/ship_1.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://calo5lh1fmqqk" path="res://scenes/asteroid.tscn" id="3_jyhfs"]
+[ext_resource type="Script" uid="uid://bw0rtxf06upvr" path="res://scripts/asteroid.gd" id="4_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://dlolhhci7jt7w" path="res://scenes/enemy.tscn" id="5_tbgi4"]
+[ext_resource type="Script" uid="uid://1rye2bh40lrl" path="res://scripts/main.gd" id="6_main"]
+
+[node name="Node2D" type="Node2D" unique_id=893714586]
+script = ExtResource("6_main")
+enemy_scene = ExtResource("5_tbgi4")
+
+[node name="background" type="Sprite2D" parent="." unique_id=435295810]
+position = Vector2(514, 380)
+texture = ExtResource("1_ig7tw")
+
+[node name="Node2D" parent="." unique_id=580628987 instance=ExtResource("2_0wfyh")]
+position = Vector2(635, 426)
+
+[node name="Asteroid" parent="." unique_id=828906727 instance=ExtResource("3_jyhfs")]
+position = Vector2(203, 308)
+script = ExtResource("4_tbgi4")
+
+[node name="LifetimeLabel" type="Label" parent="." unique_id=893714600]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 200.0
+offset_bottom = 33.0

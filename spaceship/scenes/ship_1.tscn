@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://d1qj4kp26gvj5"]
+
+[ext_resource type="Texture2D" uid="uid://bkka4bvjmy5v6" path="res://assets/ship2.png" id="1_by3fw"]
+[ext_resource type="Script" uid="uid://djbf7f85vgoj1" path="res://scripts/ship_2.gd" id="2_a3kem"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rdl0c"]
+radius = 14.65
+height = 50.48
+
+[node name="Node2D" type="Node2D" unique_id=580628987]
+script = ExtResource("2_a3kem")
+
+[node name="Ship2" type="Sprite2D" parent="." unique_id=341120275]
+texture = ExtResource("1_by3fw")
+
+[node name="Speedometer" type="Label" parent="." unique_id=583188190]
+offset_left = -20.0
+offset_top = -50.0
+offset_right = 20.0
+offset_bottom = -27.0
+
+[node name="shipArea2D" type="Area2D" parent="." unique_id=1829466861]
+
+[node name="ShipCollisionShape" type="CollisionShape2D" parent="shipArea2D" unique_id=2013291622]
+shape = SubResource("CapsuleShape2D_rdl0c")
